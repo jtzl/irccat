@@ -3,7 +3,7 @@
 	<property name="lib.dir" location="libs"/>
 	<property name="build.dir" location="build"/>
 	<property name="dist.dir"  location="dist"/>
-    <property name="example.dir" location="examples" />
+	<property name="example.dir" location="examples"/>
     <property name="project.name" value="irccat" />
 
     <path id="classpath">
@@ -34,7 +34,7 @@
         	<tarfileset file="${basedir}/README" prefix="${project.name}" />
             <tarfileset file="${basedir}/irccat.sh" filemode="755" prefix="${project.name}" />
         	<tarfileset file="${dist.dir}/${project.name}.jar" prefix="${project.name}" />
-        	<tarfileset file="${example.dir}/irccat.xml" prefix="${project.name}" />
+        	<tarfileset file="/etc/irccat/irccat.xml" prefix="${project.name}" />
         	<tarfileset dir="${lib.dir}" includes="*.jar" prefix="${project.name}/libs" />
         </tar>
         <gzip src="${dist.dir}/${project.name}.tar" zipfile="${dist.dir}/${project.name}.tar.gz" />
